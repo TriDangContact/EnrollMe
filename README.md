@@ -12,3 +12,7 @@ $ brew install sbt@1
 ## PC ##
 Install sbt from [https://www.scala-sbt.org/download.html]
 
+# Run #
+```
+$ sbt run
+```
