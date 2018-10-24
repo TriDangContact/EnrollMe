@@ -19,7 +19,12 @@
         @* And here's where we render the `Html` object containing
          * the page content. *@
         @views.html.shared.navbar()
-        @content
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">Sidebar</div>
+                <div class="col-md-10">@content</div>
+            </div>
+        </div>
 
         <script src="@routes.Assets.versioned("javascripts/jquery-3.3.1.min.js")" type="text/javascript"></script>
         <script src="@routes.Assets.versioned("javascripts/bootstrap.min.js")" type="text/javascript"></script>
