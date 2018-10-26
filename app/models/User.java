@@ -1,10 +1,13 @@
 package models;
 
 import io.ebean.Model;
+import utilities.Encryption;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 @Entity
 public class User extends Model {
@@ -64,8 +67,8 @@ public class User extends Model {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String password) throws NoSuchAlgorithmException {
+        this.password = Encryption.md5Encrypt(password);
     }
 
     public Address getAddress() {
