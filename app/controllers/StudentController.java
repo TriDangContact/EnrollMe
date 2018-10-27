@@ -1,6 +1,6 @@
 package controllers;
 
-import models.User;
+import models.Student;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -8,24 +8,24 @@ import play.mvc.Result;
 
 import javax.inject.Inject;
 
-public class UserController extends Controller {
+public class StudentController extends Controller {
 
     private final FormFactory formFactory;
 
     @Inject
-    public UserController(FormFactory formFactory) {
+    public StudentController(FormFactory formFactory) {
         this.formFactory = formFactory;
     }
 
     public Result newUser() {
-        Form<User> userForm = this.formFactory.form(User.class);
-        return ok(views.html.user.create.render(userForm));
+        Form<Student> studentForm = this.formFactory.form(Student.class);
+        return ok(views.html.user.create.render(studentForm));
     }
 
     public Result create() {
-        Form<User> userForm = this.formFactory.form(User.class);
-        User user = userForm.bindFromRequest().get();
-        user.save();
+        Form<Student> studentForm = this.formFactory.form(Student.class);
+        Student studnet = studentForm.bindFromRequest().get();
+        studnet.save();
 
         return ok();
     }

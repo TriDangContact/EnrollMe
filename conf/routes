@@ -4,8 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-GET     /user/new                   controllers.UserController.newUser
-POST    /user/create                controllers.UserController.create
+GET     /user/new                   controllers.StudentController.newUser
+POST    /user/create                controllers.StudentController.create
 
 GET     /course/all                 controllers.CourseController.index
 

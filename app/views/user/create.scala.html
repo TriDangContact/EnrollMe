@@ -1,4 +1,4 @@
-@(userForm: Form[User])
+@(studentForm: Form[Student])
 
 @main("Create Student") {
     <div class="pt-md-5">
@@ -10,16 +10,16 @@
 
         <div class="row">
             <div class="col-md-8">
-            @helper.form(action = helper.CSRF(routes.UserController.create())) {
+            @helper.form(action = helper.CSRF(routes.StudentController.create())) {
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
-                        @helper.inputText(userForm("firstName"), 'id -> "firstName", 'class -> "form-control", '_label -> "First Name")
+                        @helper.inputText(studentForm("firstName"), 'id -> "firstName", 'class -> "form-control", '_label -> "First Name")
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
-                        @helper.inputText(userForm("lastName"), 'id -> "lastName", 'class -> "form-control", '_label -> "Last Name")
+                        @helper.inputText(studentForm("lastName"), 'id -> "lastName", 'class -> "form-control", '_label -> "Last Name")
                         </div>
                     </div>
                 </div>
@@ -66,12 +66,12 @@
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
-                        @helper.inputText(userForm("email"), 'id -> "email", 'class -> "form-control", '_label -> "Email")
+                        @helper.inputText(studentForm("email"), 'id -> "email", 'class -> "form-control", '_label -> "Email")
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
-                        @helper.inputText(userForm("phone"), 'id -> "phone", 'class -> "form-control", '_label -> "Phone")
+                        @helper.inputText(studentForm("phone"), 'id -> "phone", 'class -> "form-control", '_label -> "Phone")
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="form-row">
                     <div class="col">
                         <div class="form-group">
-                        @helper.inputPassword(userForm("password"), 'id -> "password", 'class -> "form-control", '_label -> "Password")
+                        @helper.inputPassword(studentForm("password"), 'id -> "password", 'class -> "form-control", '_label -> "Password")
                         </div>
                     </div>
                     <div class="col"></div>

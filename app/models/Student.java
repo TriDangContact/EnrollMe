@@ -5,12 +5,10 @@ import utilities.Encryption;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Entity
-public class User extends Model {
+public class Student extends Model {
 
     @Id
     private int id;
@@ -19,9 +17,11 @@ public class User extends Model {
     private String email;
     private String phone;
     private String password;
-
-    @ManyToOne
-    private Address address;
+    private String street;
+    private String city;
+    private String state;
+    private String country;
+    private String zip;
 
     public int getId() {
         return id;
@@ -71,11 +71,43 @@ public class User extends Model {
         this.password = Encryption.md5Encrypt(password);
     }
 
-    public Address getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 }
