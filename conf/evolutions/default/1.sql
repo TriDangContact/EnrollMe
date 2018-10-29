@@ -13,6 +13,12 @@ create table address (
   constraint pk_address primary key (id)
 );
 
+create table login (
+  email                         varchar(255) not null,
+  password                      varchar(255),
+  constraint pk_login primary key (email)
+);
+
 create table user (
   id                            integer auto_increment not null,
   first_name                    varchar(255),
@@ -34,6 +40,8 @@ alter table user drop foreign key fk_user_address_id;
 drop index ix_user_address_id on user;
 
 drop table if exists address;
+
+drop table if exists login;
 
 drop table if exists user;
 
