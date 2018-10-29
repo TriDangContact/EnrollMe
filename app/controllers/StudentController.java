@@ -17,9 +17,17 @@ public class StudentController extends Controller {
         this.formFactory = formFactory;
     }
 
-    public Result newUser() {
+    public Result all() {
+        return ok();
+    }
+
+    public Result show(Long id) {
+        return ok(views.html.student.show.render());
+    }
+
+    public Result newStudent() {
         Form<Student> studentForm = this.formFactory.form(Student.class);
-        return ok(views.html.user.create.render(studentForm));
+        return ok(views.html.student.create.render(studentForm));
     }
 
     public Result create() {
@@ -30,11 +38,11 @@ public class StudentController extends Controller {
         return ok();
     }
 
-    public Result edit() {
+    public Result edit(Long id) {
         return ok();
     }
 
-    public Result delete() {
+    public Result delete(Long id) {
         return ok();
     }
 }

@@ -1,5 +1,161 @@
 @main("Show Course") {
-    <div class="demo">
-        <h1>Hello from course</h1>
+<div class="pt-md-5">
+    <div class="page-header row">
+        <div class="col-sm-12">
+            <h1>Courses</h1>
+            <h5>You can filter courses by selecting various criterias below.</h5>
+        </div>
     </div>
+
+    <form>
+        <div class="row mb-10">
+            <div class="col">
+                <select class="form-control">
+                    <option value="0" selected>Department</option>
+                    <option value="1">CS</option>
+                    <option value="2">Engineering</option>
+                    <option value="3">Physics</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-control">
+                    <option value="0" selected>Course ID</option>
+                    <option value="1">CS532</option>
+                    <option value="2">CS565</option>
+                    <option value="3">CS310</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-control">
+                    <option value="0" selected>Day</option>
+                    <option value="1">MW</option>
+                    <option value="2">TTH</option>
+                    <option value="3">Sat</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-control">
+                    <option value="0" selected>Time</option>
+                    <option value="1">Morning</option>
+                    <option value="2">Afternoon</option>
+                    <option value="3">Night</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-control">
+                    <option value="0" selected>Seats Available</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button type="reset" class="btn btn-secondary mr-2">Reset</button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </form>
+    <!--End of Filter Options-->
+
+
+
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">Course ID</th>
+            <th scope="col">Schedule#</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Units</th>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Location</th>
+            <th scope="col">Instructor</th>
+            <th scope="col">Seats</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        <tr>
+            <th scope="row">courseID</th>
+            <td>schedule#</td>
+            <td>courseName</td>
+            <td>3</td>
+            <td>MW</td>
+            <td>1:00PM-2:15PM</td>
+            <td>GMCS-300</td>
+            <td>J. Carroll</td>
+            <td>10/20</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary mt-5" href="#" role="button">Back to top</a>
+
+</div>
 }
