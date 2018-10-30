@@ -17,6 +17,8 @@ GET     /course/new                 controllers.CourseController.newCourse
 GET     /course/edit                controllers.CourseController.edit
 POST    /course/create              controllers.CourseController.create
 
+GET     /demo/faculty/all           controllers.DemoController.facultyAll
+
 GET     /faq                        controllers.SiteController.faq
 
 # Map static resources from the /public folder to the /assets URL path
