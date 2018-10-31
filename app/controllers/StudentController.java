@@ -33,8 +33,8 @@ public class StudentController extends Controller {
 
     public Result create() {
         Form<Student> studentForm = this.formFactory.form(Student.class);
-        Student studnet = studentForm.bindFromRequest().get();
-        studnet.save();
+        Student student = studentForm.bindFromRequest().get();
+        student.save();
 
         return redirect("/student/show/" + studnet.getId());
     }
