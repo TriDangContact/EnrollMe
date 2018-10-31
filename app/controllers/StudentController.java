@@ -23,7 +23,7 @@ public class StudentController extends Controller {
 
     public Result show(Long id) {
         Student student = Student.find.byId(id);
-        return ok(views.html.student.show.render(student));
+        return ok(views.html.student.view.render(student));
     }
 
     public Result newStudent() {
@@ -36,7 +36,7 @@ public class StudentController extends Controller {
         Student student = studentForm.bindFromRequest().get();
         student.save();
 
-        return redirect("/student/show/" + studnet.getId());
+        return redirect("/student/show/" + student.getId());
     }
 
     public Result edit(Long id) {
