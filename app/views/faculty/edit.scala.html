@@ -1,13 +1,24 @@
-@main("New Faculty") {
+@main("Edit Faculty") {
 <div class="pt-md-5">
     <div class="page-header row">
         <div class="col-sm-12">
-            <h1>New Faculty</h1>
+            <h1>Edit Faculty</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-8">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="id">Faculty ID</label>
+                        <input type="text" class="form-control" id="id" placeholder="<facultyID>" readonly>
+                    </div>
+                </div>
+
+                <div class="col"></div>
+            </div>
 
             <div class="form-row">
                 <div class="col">
@@ -23,9 +34,8 @@
                     </div>
                 </div>
             </div>
-            <!-- End of Schedule# and Course Name -->
 
-            <!--Creating row of checkbox for Date Held-->
+
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">
@@ -88,7 +98,31 @@
                 </div>
             </div>
 
-            <!--Alternative for Time Start (Form Control)-->
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="officePhone">Office Phone</label>
+                        <input type="text" class="form-control" id="officePhone" placeholder="(###) ###-####">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="officeLocation">Office Location</label>
+                        <input type="text" class="form-control" id="officeLocation" placeholder="Office Location">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="officeHours">Office Hours</label>
+                        <input type="text" class="form-control" id="officeHours" placeholder="Office Hours">
+                    </div>
+                </div>
+
+
+            </div>
+
+
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">

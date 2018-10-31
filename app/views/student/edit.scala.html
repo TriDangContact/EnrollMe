@@ -1,13 +1,24 @@
-@main("New Faculty") {
+@main("Edit Student") {
 <div class="pt-md-5">
     <div class="page-header row">
         <div class="col-sm-12">
-            <h1>New Faculty</h1>
+            <h1>Edit Student</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-8">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="id">Student ID</label>
+                        <input type="text" class="form-control" id="id" placeholder="<studentID>" readonly>
+                    </div>
+                </div>
+
+                <div class="col"></div>
+            </div>
 
             <div class="form-row">
                 <div class="col">
@@ -23,9 +34,8 @@
                     </div>
                 </div>
             </div>
-            <!-- End of Schedule# and Course Name -->
 
-            <!--Creating row of checkbox for Date Held-->
+
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">
@@ -88,31 +98,25 @@
                 </div>
             </div>
 
-            <!--Alternative for Time Start (Form Control)-->
+
             <div class="form-row">
                 <div class="col">
                     <div class="form-group">
-                        <label for="departmentSelect" class="control-label">Department</label>
-                        <select class="form-control" id="departmentSelect">
-                            <option value="department0" selected>Department</option>
-                            <option value="department1">Business</option>
-                            <option value="department2">Engineering</option>
-                            <option value="department3">Computer Science</option>
-                            <option value="department4">Art</option>
-                        </select>
+                        <label for="major">Major</label>
+                        <input type="text" class="form-control" id="major" placeholder="Major">
                     </div>
-
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="position">Position</label>
-                        <input type="text" class="form-control" id="position" placeholder="Position">
+                        <label for="minor">Minor</label>
+                        <input type="text" class="form-control" id="minor" placeholder="Minor">
                     </div>
                 </div>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
+
         </div>
     </div>
 </div>
