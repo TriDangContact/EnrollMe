@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Major;
 import models.Student;
 import play.data.Form;
 import play.data.FormFactory;
@@ -7,6 +8,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.util.HashMap;
+import java.util.List;
 
 public class StudentController extends Controller {
 
@@ -26,12 +29,17 @@ public class StudentController extends Controller {
         return ok(views.html.student.view.render(student));
     }
 
-    public Result newStudent() {
+    public Result create() {
         Form<Student> studentForm = this.formFactory.form(Student.class);
-        return ok(views.html.student.create.render(studentForm));
+        List<Major> majors = Major.find.all();
+        HashMap<String, String> options = new HashMap<>();
+        for (Major major : majors) {
+            options.put(Integer.toString(major.getId()), major.getName());
+        }
+        return ok(views.html.student.create.render(studentForm, options));
     }
 
-    public Result create() {
+    public Result save() {
         Form<Student> studentForm = this.formFactory.form(Student.class);
         Student student = studentForm.bindFromRequest().get();
         student.save();

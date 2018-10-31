@@ -6,8 +6,8 @@
 GET     /                           controllers.HomeController.index
 
 GET     /student/all                controllers.StudentController.all
-GET     /student/new                controllers.StudentController.newStudent
-POST    /student/create             controllers.StudentController.create
+GET     /student/new                controllers.StudentController.create
+POST    /student/save               controllers.StudentController.save
 GET     /student/show/:id           controllers.StudentController.show(id: Long)
 PUT     /student/edit/:id           controllers.StudentController.edit(id: Long)
 DELETE  /student/delete/:id         controllers.StudentController.delete(id: Long)

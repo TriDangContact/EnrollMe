@@ -6,6 +6,7 @@ import utilities.Encryption;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.security.NoSuchAlgorithmException;
 
 @Entity
@@ -26,6 +27,9 @@ public class Student extends Model {
     private String state;
     private String country;
     private String zip;
+
+    @ManyToOne
+    private Major major;
 
     public int getId() {
         return id;
@@ -113,5 +117,13 @@ public class Student extends Model {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    public Major getMajor() {
+        return major;
+    }
+
+    public void setMajor(Major major) {
+        this.major = major;
     }
 }
