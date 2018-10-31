@@ -18,11 +18,12 @@ public class StudentController extends Controller {
     }
 
     public Result all() {
-        return ok();
+        return ok(views.html.student.list.render());
     }
 
     public Result show(Long id) {
-        return ok(views.html.student.show.render());
+        Student student = Student.find.byId(id);
+        return ok(views.html.student.show.render(student));
     }
 
     public Result newStudent() {
@@ -35,7 +36,7 @@ public class StudentController extends Controller {
         Student studnet = studentForm.bindFromRequest().get();
         studnet.save();
 
-        return ok();
+        return redirect("/student/show/" + studnet.getId());
     }
 
     public Result edit(Long id) {

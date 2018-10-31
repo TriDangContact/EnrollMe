@@ -1,5 +1,6 @@
 package models;
 
+import io.ebean.Finder;
 import io.ebean.Model;
 import utilities.Encryption;
 
@@ -9,6 +10,9 @@ import java.security.NoSuchAlgorithmException;
 
 @Entity
 public class Student extends Model {
+
+    //used to simplify querying our model
+    public static final Finder<Long, Student> find = new Finder<>(Student.class);
 
     @Id
     private int id;

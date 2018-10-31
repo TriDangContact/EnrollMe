@@ -15,5 +15,4 @@ server.pid
 /dist/
 .cache
 .idea/
-random
-conf/evolutions*
+conf/evolutions/
