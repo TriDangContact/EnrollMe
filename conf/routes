@@ -34,6 +34,8 @@ GET     /demo/course/new            controllers.DemoController.courseNew
 GET     /demo/course/edit           controllers.DemoController.courseEdit
 GET     /demo/course/view           controllers.DemoController.courseView
 
+GET     /demo/site/login            controllers.DemoController.login
+
 GET     /faq                        controllers.SiteController.faq
 
 # Map static resources from the /public folder to the /assets URL path

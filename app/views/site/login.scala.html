@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+    <title>Login</title>
+</head>
+<body class="bg-warning">
+    <header class="page-header-row">
+        <img class="img-fluid" src="/assets/images/school-logo.png" alt="Logo">
+    </header>
+
+    <div class="w-25 bg-white text-center m-auto p-5 border">
+
+        <div>
+            <img class="img-fluid" src="/assets/images/EnrollMe-logo.png" alt="EnrollMe">
+        </div>
+
+        <div class="form-inline my-4 justify-content-center">
+                <div class="form-group">
+                    <div class="col">
+                        <input type="text" class="form-control justify-self-end" id="id" placeholder="ID">
+                    </div>
+                </div>
+        </div>
+
+        <div class="form-inline my-4 justify-content-center">
+                <div class="form-group">
+                    <input type="password" class="form-control justify-self-center" id="password" placeholder="Password">
+                </div>
+        </div>
+
+        <div class="mt-5 justify-content-center">
+            <div class="align-self-center">
+                <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+        <div class="my-3 justify-content-center">
+            <div class="align-self-center">
+                <a class="text-primary" href="#">Forgot Password?</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="d-flex justify-content-end align-items-top m-3 fixed-bottom">
+        <h3>Powered by</h3>
+        <div>
+            <img src="/assets/images/group-logo.png" alt="Group Logo" width="200" height="auto">
+        </div>
+    </footer>
+
+    <script src="@routes.Assets.versioned("javascripts/jquery-3.3.1.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.versioned("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+</body>
+</html>

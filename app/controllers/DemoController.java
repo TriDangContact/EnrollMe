@@ -56,4 +56,6 @@ public class DemoController extends Controller {
     public Result courseDelete() { return ok(); }
 
 
+//    Login page
+    public Result login() { return ok(views.html.site.login.render()); }
 }
