@@ -51,20 +51,31 @@ public class StudentController extends Controller {
     }
 
     public CompletionStage<Result> save() {
-        Form<Student> studentForm = this.formFactory.form(Student.class);
-        Student student = studentForm.bindFromRequest().get();
+        Form<Student> studentForm = this.formFactory.form(Student.class).bindFromRequest();
+        Student student = studentForm.get();
 
         return studentRepository.insert(student).thenApplyAsync(studentId ->
                 redirect(routes.StudentController.show(studentId)), httpExecutionContext.current()
         );
     }
 
-    public Result edit(Long id) {
-        return ok();
+    public CompletionStage<Result> edit(Long id) {
+        CompletionStage<Map<String, String>> majorsOptions = majorRepository.options();
+
+        return studentRepository.lookup(id).thenCombineAsync(majorsOptions, (studentOptional, majors) -> {
+            Student student = studentOptional.get();
+            Form<Student> studentForm = this.formFactory.form(Student.class).fill(student);
+            return ok(views.html.student.edit.render(id, studentForm, majors));
+        }, httpExecutionContext.current());
     }
 
-    public Result update(Long id) {
-        return ok();
+    public CompletionStage<Result> update(Long id) {
+        Form<Student> studentForm = this.formFactory.form(Student.class).bindFromRequest();
+        Student student = studentForm.get();
+
+        return studentRepository.update(id, student).thenApplyAsync(studentId ->
+                redirect(routes.StudentController.show(studentId.get())), httpExecutionContext.current()
+        );
     }
 
     public Result delete(Long id) {

@@ -10,7 +10,7 @@ GET     /student/new                controllers.StudentController.create
 POST    /student/save               controllers.StudentController.save
 GET     /student/show/:id           controllers.StudentController.show(id: Long)
 GET     /student/edit/:id           controllers.StudentController.edit(id: Long)
-PUT     /student/update/:id         controllers.StudentController.update(id: Long)
+POST    /student/update/:id         controllers.StudentController.update(id: Long)
 DELETE  /student/delete/:id         controllers.StudentController.delete(id: Long)
 
 GET     /course                     controllers.CourseController.index
@@ -27,7 +27,7 @@ GET     /demo/faculty/view          controllers.DemoController.facultyView
 
 GET     /demo/student/all           controllers.DemoController.studentAll
 GET     /demo/student/new           controllers.DemoController.studentNew
-GET     /demo/student/edit          controllers.DemoController.studentEdit
+# GET     /demo/student/edit          controllers.DemoController.studentEdit
 GET     /demo/student/view          controllers.DemoController.studentView
 
 GET     /demo/course/all            controllers.DemoController.courseAll

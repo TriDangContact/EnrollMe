@@ -37,7 +37,7 @@ public class DemoController extends Controller {
 
     public Result studentView() { return ok(views.html.student.view.render(null)); }
 
-    public Result studentEdit() { return ok(views.html.student.edit.render()); }
+//    public Result studentEdit() { return ok(views.html.student.edit.render()); }
 
     public Result studentDelete() { return ok(); }
 
