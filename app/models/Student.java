@@ -31,6 +31,9 @@ public class Student extends Model {
     @ManyToOne
     private Major major;
 
+    @ManyToOne
+    private Major minor;
+
     public int getId() {
         return id;
     }
@@ -125,5 +128,13 @@ public class Student extends Model {
 
     public void setMajor(Major major) {
         this.major = major;
+    }
+
+    public Major getMinor() {
+        return minor;
+    }
+
+    public void setMinor(Major minor) {
+        this.minor = minor;
     }
 }

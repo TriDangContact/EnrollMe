@@ -97,6 +97,19 @@
                         )
                         </div>
                     </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                        @select(
+                            studentForm("minor.id"),
+                            options(majors),
+                            '_label -> "Minor",
+                            '_default -> "-- Choose a minor --",
+                            '_showConstraints -> false,
+                            'class -> "form-control"
+                        )
+                        </div>
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

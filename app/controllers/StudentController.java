@@ -4,20 +4,28 @@ import models.Major;
 import models.Student;
 import play.data.Form;
 import play.data.FormFactory;
+import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Result;
+import repository.MajorRepository;
 
 import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.CompletionStage;
 
 public class StudentController extends Controller {
 
     private final FormFactory formFactory;
+    private final MajorRepository majorRepository;
+    private final HttpExecutionContext httpExecutionContext;
 
     @Inject
-    public StudentController(FormFactory formFactory) {
+    public StudentController(FormFactory formFactory, MajorRepository majorRepository, HttpExecutionContext httpExecutionContext) {
         this.formFactory = formFactory;
+        this.majorRepository = majorRepository;
+        this.httpExecutionContext = httpExecutionContext;
     }
 
     public Result all() {
@@ -29,14 +37,13 @@ public class StudentController extends Controller {
         return ok(views.html.student.view.render(student));
     }
 
-    public Result create() {
+    public CompletionStage<Result> create() {
         Form<Student> studentForm = this.formFactory.form(Student.class);
-        List<Major> majors = Major.find.all();
-        HashMap<String, String> options = new HashMap<>();
-        for (Major major : majors) {
-            options.put(Integer.toString(major.getId()), major.getName());
-        }
-        return ok(views.html.student.create.render(studentForm, options));
+        // Run majors db operation and then render the form
+        return majorRepository.options().thenApplyAsync((Map<String, String> majors) -> {
+            // This is the HTTP rendering thread context
+            return ok(views.html.student.create.render(studentForm, majors));
+        }, httpExecutionContext.current());
     }
 
     public Result save() {
