@@ -9,7 +9,8 @@ GET     /student/all                controllers.StudentController.all
 GET     /student/new                controllers.StudentController.create
 POST    /student/save               controllers.StudentController.save
 GET     /student/show/:id           controllers.StudentController.show(id: Long)
-PUT     /student/edit/:id           controllers.StudentController.edit(id: Long)
+GET     /student/edit/:id           controllers.StudentController.edit(id: Long)
+PUT     /student/update/:id         controllers.StudentController.update(id: Long)
 DELETE  /student/delete/:id         controllers.StudentController.delete(id: Long)
 
 GET     /course                     controllers.CourseController.index

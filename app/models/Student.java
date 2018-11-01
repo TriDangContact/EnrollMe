@@ -16,7 +16,7 @@ public class Student extends Model {
     public static final Finder<Long, Student> find = new Finder<>(Student.class);
 
     @Id
-    private int id;
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -34,11 +34,11 @@ public class Student extends Model {
     @ManyToOne
     private Major minor;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
