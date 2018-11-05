@@ -1,8 +1,10 @@
+@(studentForm: Form[Student], majors: Map[String, String])
 @import java.util
 @import helper._
-@(studentForm: Form[Student], majors: Map[String, String])
 
-@main("Create Student") {
+@sidebarLayout("Create Student") {
+    @views.html.shared.adminSidebar()
+} {
     <div class="pt-md-5">
         <div class="page-header row">
             <div class="col-sm-12">

@@ -1,0 +1,11 @@
+@(title: String)(sidebar: Html)(content: Html)
+
+@main(title) {
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">@sidebar</div>
+            <div class="col-md-1"></div>
+            <div class="col-md-9">@content</div>
+        </div>
+    </div>
+}

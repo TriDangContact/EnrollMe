@@ -1,6 +1,5 @@
 package controllers;
 
-import models.Major;
 import models.Student;
 import play.data.Form;
 import play.data.FormFactory;
@@ -11,8 +10,6 @@ import repository.MajorRepository;
 import repository.StudentRepository;
 
 import javax.inject.Inject;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletionStage;
 
