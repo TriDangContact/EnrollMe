@@ -10,10 +10,10 @@ import javax.persistence.ManyToOne;
 import java.security.NoSuchAlgorithmException;
 
 @Entity
-public class Student extends Model {
+public class Faculty extends Model {
 
     //used to simplify querying our model
-    public static final Finder<Long, Student> find = new Finder<>(Student.class);
+    public static final Finder<Long, Faculty> find = new Finder<>(Faculty.class);
 
     @Id
     private Long id;
@@ -29,10 +29,7 @@ public class Student extends Model {
     private String zip;
 
     @ManyToOne
-    private Major major;
-
-    @ManyToOne
-    private Major minor;
+    private Department department;
 
     public Long getId() {
         return id;
@@ -122,19 +119,12 @@ public class Student extends Model {
         this.zip = zip;
     }
 
-    public Major getMajor() {
-        return major;
+    public Department getDepartment() {
+        return department;
     }
-
-    public void setMajor(Major major) {
-        this.major = major;
-    }
-
-    public Major getMinor() {
-        return minor;
-    }
-
-    public void setMinor(Major minor) {
-        this.minor = minor;
+    
+    @Override
+    public String toString() {
+        return "Professor "+firstName+" "+lastName+" (Email: "+email+", Phone: "+phone+") ";
     }
 }

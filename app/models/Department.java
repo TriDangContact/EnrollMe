@@ -41,3 +41,8 @@ public class Department extends Model {
     public void setAbbreviation() {
         this.abbreviation = abbreviation;
     }
+    
+    @Override
+    public String toString() {
+        return "Department: "+name+" ["+abbreviation+"].";
+    }
