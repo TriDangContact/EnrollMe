@@ -2,11 +2,9 @@ package models;
 
 import io.ebean.Finder;
 import io.ebean.Model;
-import utilities.Encryption;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import java.security.NoSuchAlgorithmException;
 
 @Entity
