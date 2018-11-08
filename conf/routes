@@ -13,17 +13,17 @@ GET     /student/edit/:id           controllers.StudentController.edit(id: Long)
 POST    /student/update/:id         controllers.StudentController.update(id: Long)
 DELETE  /student/delete/:id         controllers.StudentController.delete(id: Long)
 
+GET     /faculty/show/:id           controllers.FacultyController.show(id: Long)
+
 GET     /course                     controllers.CourseController.index
 GET     /course/new                 controllers.CourseController.newCourse
 GET     /course/edit                controllers.CourseController.edit
 POST    /course/create              controllers.CourseController.create
 
-
-
 GET     /demo/faculty/all           controllers.DemoController.facultyAll
 GET     /demo/faculty/new           controllers.DemoController.facultyNew
 GET     /demo/faculty/edit          controllers.DemoController.facultyEdit
-GET     /demo/faculty/view          controllers.DemoController.facultyView
+
 
 GET     /demo/student/all           controllers.DemoController.studentAll
 GET     /demo/student/new           controllers.DemoController.studentNew

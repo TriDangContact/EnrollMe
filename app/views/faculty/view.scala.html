@@ -1,3 +1,5 @@
+@(faculty: Faculty)
+
 @main("View Faculty") {
 <div class="pt-md-5">
     <div class="page-header row">
@@ -8,14 +10,12 @@
 
     <div class="row">
         <div class="col-md-8">
-
-
             <div class="row">
                 <div class="col">
                     <p class="font-weight-bold">Faculty ID:</p>
                 </div>
                 <div class="col">
-                    <p>&ltfacultyID&gt</p>
+                    <p>@faculty.getId</p>
                 </div>
                 <div class="col"></div>
                 <div class="col"></div>
@@ -26,13 +26,13 @@
                     <p class="font-weight-bold">First Name:</p>
                 </div>
                 <div class="col">
-                    <p>&ltfirstName&gt</p>
+                    <p>@faculty.getFirstName</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">Last Name:</p>
                 </div>
                 <div class="col">
-                    <p>&ltlastName&gt</p>
+                    <p>@faculty.getLastName</p>
                 </div>
             </div>
 
@@ -41,13 +41,7 @@
                     <p class="font-weight-bold">Street 1:</p>
                 </div>
                 <div class="col">
-                    <p>&ltstreet1&gt</p>
-                </div>
-                <div class="col">
-                    <p class="font-weight-bold">Street 2:</p>
-                </div>
-                <div class="col">
-                    <p>&ltstreet2&gt</p>
+                    <p>@faculty.getStreet</p>
                 </div>
             </div>
 
@@ -56,13 +50,13 @@
                     <p class="font-weight-bold">City:</p>
                 </div>
                 <div class="col">
-                    <p>&ltcity&gt</p>
+                    <p>@faculty.getCity</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">State:</p>
                 </div>
                 <div class="col">
-                    <p>&ltstate&gt</p>
+                    <p>@faculty.getState</p>
                 </div>
 
             </div>
@@ -72,13 +66,13 @@
                     <p class="font-weight-bold">Zip Code:</p>
                 </div>
                 <div class="col">
-                    <p>&ltzipCode&gt</p>
+                    <p>@faculty.getZip</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">Country:</p>
                 </div>
                 <div class="col">
-                    <p>&ltcountry&gt</p>
+                    <p>@faculty.getCountry</p>
                 </div>
             </div>
 
@@ -87,13 +81,13 @@
                     <p class="font-weight-bold">Phone:</p>
                 </div>
                 <div class="col">
-                    <p>&ltphone&gt</p>
+                    <p>@faculty.getPhone</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">Email Address:</p>
                 </div>
                 <div class="col">
-                    <p>&ltemail&gt</p>
+                    <p>@faculty.getEmail</p>
                 </div>
             </div>
 
@@ -102,13 +96,13 @@
                     <p class="font-weight-bold">Office Phone:</p>
                 </div>
                 <div class="col">
-                    <p>&ltofficePhone&gt</p>
+                    <p>N/A</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">Office Location:</p>
                 </div>
                 <div class="col">
-                    <p>&ltofficeLocation&gt</p>
+                    <p>N/A</p>
                 </div>
 
             </div>
@@ -118,7 +112,7 @@
                     <p class="font-weight-bold">Office Hours:</p>
                 </div>
                 <div class="col">
-                    <p>&ltofficeHours&gt</p>
+                    <p>N/A</p>
                 </div>
                 <div class="col"></div>
                 <div class="col"></div>
@@ -129,13 +123,13 @@
                     <p class="font-weight-bold">Department:</p>
                 </div>
                 <div class="col">
-                    <p>&ltdepartment&gt</p>
+                    <p>N/A</p>
                 </div>
                 <div class="col">
                     <p class="font-weight-bold">Position:</p>
                 </div>
                 <div class="col">
-                    <p>&ltposition&gt</p>
+                    <p>N/A</p>
                 </div>
             </div>
 

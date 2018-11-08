@@ -122,6 +122,10 @@ public class Faculty extends Model {
     public Department getDepartment() {
         return department;
     }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
     
     @Override
     public String toString() {

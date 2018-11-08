@@ -46,3 +46,4 @@ public class Department extends Model {
     public String toString() {
         return "Department: "+name+" ["+abbreviation+"].";
     }
+}

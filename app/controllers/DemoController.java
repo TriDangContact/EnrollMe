@@ -16,7 +16,7 @@ public class DemoController extends Controller {
 
     public Result facultyCreate() { return ok(); }
 
-    public Result facultyView() { return ok(views.html.faculty.view.render()); }
+    //public Result facultyView() { return ok(views.html.faculty.view.render()); }
 
     public Result facultyEdit() { return ok(views.html.faculty.edit.render()); }
 

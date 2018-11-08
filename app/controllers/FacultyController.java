@@ -1,13 +1,14 @@
 package controllers;
 
-import models.Student;
+import models.Faculty;
+import models.Department;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Controller;
 import play.mvc.Result;
-import repository.MajorRepository;
-import repository.StudentRepository;
+//import repository.DepartmentRepository;
+//import repository.FacultyRepository;
 
 import javax.inject.Inject;
 import java.util.Map;
@@ -16,43 +17,44 @@ import java.util.concurrent.CompletionStage;
 public class FacultyController extends Controller {
 
     private final FormFactory formFactory;
-    private final MajorRepository majorRepository;
-    private final StudentRepository studentRepository;
+    //private final DepartmentRepository departmentRepository;
+    //private final FacultyRepository facultyRepository;
     private final HttpExecutionContext httpExecutionContext;
 
     @Inject
-    public StudentController(FormFactory formFactory,
-                             MajorRepository majorRepository,
-                             StudentRepository studentRepository,
+    public FacultyController(FormFactory formFactory,
+                             //DepartmentRepository departmentRepository,
+                             //FacultyRepository facultyRepository,
                              HttpExecutionContext httpExecutionContext) {
         this.formFactory = formFactory;
-        this.majorRepository = majorRepository;
-        this.studentRepository = studentRepository;
+        //this.departmentRepository = departmentRepository;
+        //this.facultyRepository = facultyRepository;
         this.httpExecutionContext = httpExecutionContext;
     }
 
+
     public Result all() {
-        return ok(views.html.student.list.render());
+        return ok(views.html.faculty.all.render());
     }
 
     public Result show(Long id) {
-        Student student = Student.find.byId(id);
-        return ok(views.html.student.view.render(student));
+        Faculty faculty = Faculty.find.byId(id);
+        return ok(views.html.faculty.view.render(faculty));
     }
-
+    /*
     public CompletionStage<Result> create() {
-        Form<Student> studentForm = this.formFactory.form(Student.class);
+        Form<Faculty> facultyForm = this.formFactory.form(Faculty.class);
         // Run majors db operation and then render the form
-        return majorRepository.options().thenApplyAsync((Map<String, String> majors) ->
-                ok(views.html.student.create.render(studentForm, majors)), httpExecutionContext.current());
+        return departmentRepository.options().thenApplyAsync((Map<String, String> department) ->
+                ok(views.html.faculty.create.render(facultyForm, department)), httpExecutionContext.current());
     }
 
     public CompletionStage<Result> save() {
-        Form<Student> studentForm = this.formFactory.form(Student.class).bindFromRequest();
-        Student student = studentForm.get();
+        Form<Faculty> facultyForm = this.formFactory.form(Faculty.class).bindFromRequest();
+        Faculty faculty = facultyForm.get();
 
-        return studentRepository.insert(student).thenApplyAsync(studentId ->
-                redirect(routes.StudentController.show(studentId)), httpExecutionContext.current()
+        return facultyRepository.insert(faculty).thenApplyAsync(facultyId ->
+                redirect(routes.facultyController.show(facultyId)), httpExecutionContext.current()
         );
     }
 
@@ -74,8 +76,9 @@ public class FacultyController extends Controller {
                 redirect(routes.StudentController.show(studentId.get())), httpExecutionContext.current()
         );
     }
-
+*/
     public Result delete(Long id) {
         return ok();
     }
+    
 }
