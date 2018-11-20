@@ -2,6 +2,7 @@ package models;
 
 import io.ebean.Finder;
 import io.ebean.Model;
+import play.data.validation.Constraints;
 import utilities.Encryption;
 
 import javax.persistence.Entity;
@@ -17,11 +18,23 @@ public class Student extends Model {
 
     @Id
     private Long id;
+
+    @Constraints.Required
     private String firstName;
+
+    @Constraints.Required
     private String lastName;
+
+    @Constraints.Required
+    @Constraints.Email
     private String email;
+
+    @Constraints.Required
     private String phone;
+
+    @Constraints.Required
     private String password;
+
     private String street;
     private String city;
     private String state;
