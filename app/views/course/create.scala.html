@@ -1,0 +1,251 @@
+@main("New Course") {
+    <div class="pt-md-5">
+        <div class="page-header row">
+            <div class="col-sm-12">
+                <h1>New Course</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="schedule">Course ID</label>
+                            <input type="number" class="form-control" id="schedule" placeholder="Schedule#">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="courseName">Course Name</label>
+                            <input type="text" class="form-control" id="courseName" placeholder="Course Name">
+                        </div>
+                    </div>
+                </div>
+                    <!-- End of Schedule# and Course Name -->
+
+                    <!--Creating row of checkbox for Date Held-->
+                <div class="form-row">
+                    <div class="col">
+                        <label>Date Held</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate1" value="courseDateMon">
+                                <label class="form-check-label" for="courseDate1">Monday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate2" value="courseDateTues">
+                                <label class="form-check-label" for="courseDate2">Tuesday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate3" value="courseDateWed">
+                                <label class="form-check-label" for="courseDate3">Wednesday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate4" value="courseDateThu">
+                                <label class="form-check-label" for="courseDate4">Thursday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate5" value="courseDateFri">
+                                <label class="form-check-label" for="courseDate5">Friday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate6" value="courseDateSat">
+                                <label class="form-check-label" for="courseDate6">Saturday</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="courseDate7" value="courseDateSun">
+                                <label class="form-check-label" for="courseDate7">Sunday</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- End of Date held -->
+
+                    <!--Alternative for Time Start (Form Control)-->
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectHourStart" class="control-label">Start</label>
+                            <select class="form-control" id="selectHourStart">
+                                <option value="9" selected>9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectMinuteStart" class="control-label">Minute</label>
+                            <select class="form-control" id="selectMinuteStart">
+                                <option value="0" selected>:00</option>
+                                <option value="15">:15</option>
+                                <option value="30">:30</option>
+                                <option value="45">:45</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectPeriodStart" class="control-label">Period</label>
+                            <select class="form-control" id="selectPeriodStart">
+                                <option value="am" selected>AM</option>
+                                <option value="pm">PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col"></div>
+
+                        <!--Form for End Time-->
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectHourEnd" class="control-label">End</label>
+                            <select class="form-control" id="selectHourEnd">
+                                <option value="9" selected>9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectMinuteEnd" class="control-label">Minute</label>
+                            <select class="form-control" id="selectMinuteEnd">
+                                <option value="0" selected>:00</option>
+                                <option value="15">:15</option>
+                                <option value="30">:30</option>
+                                <option value="45">:45</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectPeriodEnd" class="control-label">Period</label>
+                            <select class="form-control" id="selectPeriodEnd">
+                                <option value="am" selected>AM</option>
+                                <option value="pm">PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    <!--End of Alternative Selection for Time Start and End (Form Control)-->
+
+
+
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Location">
+                        </div>
+                    </div>
+                </div>
+                    <!--End of Course Location-->
+
+
+                <div class="form-row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="instructorName">Instructor Name</label>
+                            <input type="text" class="form-control" id="instructorName" placeholder="Instructor Name">
+                        </div>
+                    </div>
+                </div>
+                    <!--End of Instructor Name-->
+
+                    <!--Start of Grade/Units/Seats-->
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectGrade" class="control-label">Grade</label>
+                            <select id="selectGrade" class="form-control">
+                                <option value="1" selected>Letter</option>
+                                <option value="2">Credit/NoCredit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectUnit" class="control-label">Units</label>
+                            <select id="selectUnit" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3" selected>3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="selectUnit" class="control-label">Seats</label>
+                            <input type="number" class="form-control" id="seats" placeholder="#" min="0">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="department">Department</label>
+                            <select id="department" class="form-control">
+                                <option value="department0" selected>Department</option>
+                                <option value="department1">Business</option>
+                                <option value="department2">Computer Science</option>
+                                <option value="department3">Electrical Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                    <!--End of Grade/Units/Seats-->
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="prerequisite">Prerequisite(s)</label>
+                            <input type="text" class="form-control" id="prerequisite" placeholder="Course ID, separated by comma...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="courseDescription">Course Description</label>
+                            <textarea class="form-control" id="courseDescription" rows="3" placeholder="Course Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                    <!--End of misc. course info-->
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+
+            </div>
+        </div>
+    </div>
+}

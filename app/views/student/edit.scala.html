@@ -1,0 +1,127 @@
+@import java.util
+@import helper._
+@(id: Long, studentForm: Form[Student], majors: Map[String, String])
+
+@main("Edit Student") {
+    <div class="pt-md-5">
+        <div class="page-header row">
+            <div class="col-sm-12">
+                <h1>Edit Student</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+
+            @form(action = CSRF(routes.StudentController.update(id))) {
+                <div class="form-row">
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                        @inputText(studentForm("id"), 'id -> "id", 'class -> "form-control", '_label -> "Student ID", 'readonly -> "readonly")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("firstName"), 'id -> "firstName", 'class -> "form-control", '_label -> "First Name")
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("lastName"), 'id -> "lastName", 'class -> "form-control", '_label -> "Last Name")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("street"), 'id -> "street", 'class -> "form-control", '_label -> "Street")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("city"), 'id -> "city", 'class -> "form-control", '_label -> "City")
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("state"), 'id -> "state", 'class -> "form-control", '_label -> "State")
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("zip"), 'id -> "zip", 'class -> "form-control", '_label -> "Postal Code")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("country"), 'id -> "country", 'class -> "form-control", '_label -> "Country")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("email"), 'id -> "email", 'class -> "form-control", '_label -> "Email")
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                        @inputText(studentForm("phone"), 'id -> "phone", 'class -> "form-control", '_label -> "Phone")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                        @inputPassword(studentForm("password"), 'id -> "password", 'class -> "form-control", '_label -> "Password")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                        @select(
+                            studentForm("major.id"),
+                            options(majors),
+                            '_label -> "Major",
+                            '_default -> "-- Choose a major --",
+                            '_showConstraints -> false,
+                            'class -> "form-control"
+                        )
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                        @select(
+                            studentForm("minor.id"),
+                            options(majors),
+                            '_label -> "Minor",
+                            '_default -> "-- Choose a minor --",
+                            '_showConstraints -> false,
+                            'class -> "form-control"
+                        )
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Cancel</button>
+            }
+            </div>
+        </div>
+    </div>
+}

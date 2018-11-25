@@ -1,0 +1,119 @@
+@main("New Faculty") {
+<div class="pt-md-5">
+    <div class="page-header row">
+        <div class="col-sm-12">
+            <h1>New Faculty</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+            <!-- End of Schedule# and Course Name -->
+
+            <!--Creating row of checkbox for Date Held-->
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="street1">Street</label>
+                        <input type="text" class="form-control" id="street1" placeholder="Street 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="street2" placeholder="Street 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="street1">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="street1">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="street1">Zip Code</label>
+                        <input type="text" class="form-control" id="zip" placeholder="Zip Code">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="street1">Country</label>
+                        <input type="text" class="form-control" id="country" placeholder="Country">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email Address">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="(###) ###-####">
+                    </div>
+                </div>
+            </div>
+
+            <!--Alternative for Time Start (Form Control)-->
+            <div class="form-row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="departmentSelect" class="control-label">Department</label>
+                        <select class="form-control" id="departmentSelect">
+                            <option value="department0" selected>Department</option>
+                            <option value="department1">Business</option>
+                            <option value="department2">Engineering</option>
+                            <option value="department3">Computer Science</option>
+                            <option value="department4">Art</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="position">Position</label>
+                        <input type="text" class="form-control" id="position" placeholder="Position">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+        </div>
+    </div>
+</div>
+}

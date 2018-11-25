@@ -1,5 +1,53 @@
-@()
+@main("Home") {
+<div class="pt-md-5">
+    <div class="page-header row">
+        <div class="col">
+            <h1>Hello, &ltadminName&gt!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="mb-5">Welcome to your EnrollMe portal! Below are some of the
+                things you can do using your portal</p>
+        </div>
+    </div>
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="/assets/images/student-faculty.jpg" alt="Students and Faculty">
+                <div class="card-body">
+                    <h5 class="card-title">User Management</h5>
+                    <p class="card-text">You can manage Users by using various CRUD operations.</p>
+                    <a href="@routes.StudentController.all()" class="btn btn-primary">Users</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" src="/assets/images/courses.jpg" alt="Courses">
+                <div class="card-body">
+                    <h5 class="card-title">Course Management</h5>
+                    <p class="card-text">You can manage Courses by using various CRUD operations</p>
+                    <a href="#" class="btn btn-primary">Courses</a>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <p class="mt-5">If you have any questions, please feel free
+                to contact Generic University IT Servers at (###) ###-####.</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>
 }

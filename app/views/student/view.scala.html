@@ -1,0 +1,120 @@
+@(student: Student)
+
+@main("View Student") {
+    <div class="pt-md-5">
+        <div class="page-header row">
+            <div class="col-sm-12">
+                <h1>View Student</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">Student ID:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getId</p>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">First Name:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getFirstName</p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-bold">Last Name:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getLastName</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">Street 1:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getStreet</p>
+                    </div>
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">City:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getCity</p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-bold">State:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getState</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">Zip Code:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getZip</p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-bold">Country:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getCountry</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">Phone:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getPhone</p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-bold">Email Address:</p>
+                    </div>
+                    <div class="col">
+                        <p>@student.getEmail</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <p class="font-weight-bold">Major:</p>
+                    </div>
+                    <div class="col">
+                        <p>&ltmajor&gt</p>
+                    </div>
+                    <div class="col">
+                        <p class="font-weight-bold">Minor:</p>
+                    </div>
+                    <div class="col">
+                        <p>&ltminor&gt</p>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-primary btn-md" role="button" aria-pressed="true">Edit</a>
+                <a href="#" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Back</a>
+
+            </div>
+        </div>
+    </div>
+}
