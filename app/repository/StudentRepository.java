@@ -58,7 +58,7 @@ public class StudentRepository {
                     studentId = Optional.of(id);
                 }
             } catch (Exception e) {
-
+                e.printStackTrace();
             } finally {
                 txn.end();
             }
