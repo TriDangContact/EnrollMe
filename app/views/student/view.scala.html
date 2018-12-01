@@ -2,7 +2,7 @@
 
 @sidebarLayout("View Student") {
     @views.html.shared.adminSidebar()
-}{
+} {
     <div class="pt-md-5">
         <div class="page-header row">
             <div class="col-sm-12">
@@ -10,111 +10,101 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row pt-md-5">
             <div class="col-md-8">
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" value="@student.getFirstName" id="firstName" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" value="@student.getLastName" id="lastName" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- End of name -->
 
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">Student ID:</p>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="street">Street</label>
+                                <input type="text" value="@student.getStreet" id="street" class="form-control" readonly>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p>@student.getId</p>
-                    </div>
-                    <div class="col"></div>
-                    <div class="col"></div>
-                </div>
+                        <!-- End of street address -->
 
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">First Name:</p>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" value="@student.getCity" id="city" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <input type="text" value="@student.getState" id="state" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code</label>
+                                <input type="text" value="@student.getZip" id="postalCode" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" value="@student.getCountry" id="country" class="form-control" readonly>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p>@student.getFirstName</p>
-                    </div>
-                    <div class="col">
-                        <p class="font-weight-bold">Last Name:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getLastName</p>
-                    </div>
-                </div>
+                        <!-- End of address -->
 
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">Street 1:</p>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" value="@student.getEmail" id="email" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" value="@student.getPhone" id="phone" class="form-control" readonly>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <p>@student.getStreet</p>
-                    </div>
-                    <div class="col">
-                    </div>
-                    <div class="col">
-                    </div>
-                </div>
+                        <!-- End of contact info -->
 
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">City:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getCity</p>
-                    </div>
-                    <div class="col">
-                        <p class="font-weight-bold">State:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getState</p>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="major">Major</label>
+                                <input type="text" value="@student.getMajor.getName" id="major" class="form-control" readonly>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="minor">Minor</label>
+                                <input type="text" value="@student.getMinor.getAbbreviation" id="minor" class="form-control" readonly>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
+                </form>
 
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">Zip Code:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getZip</p>
-                    </div>
-                    <div class="col">
-                        <p class="font-weight-bold">Country:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getCountry</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">Phone:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getPhone</p>
-                    </div>
-                    <div class="col">
-                        <p class="font-weight-bold">Email Address:</p>
-                    </div>
-                    <div class="col">
-                        <p>@student.getEmail</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <p class="font-weight-bold">Major:</p>
-                    </div>
-                    <div class="col">
-                        <p>&ltmajor&gt</p>
-                    </div>
-                    <div class="col">
-                        <p class="font-weight-bold">Minor:</p>
-                    </div>
-                    <div class="col">
-                        <p>&ltminor&gt</p>
-                    </div>
-                </div>
-
-                <a href="@routes.StudentController.edit(student.getId)" class="btn btn-primary btn-md" role="button" aria-pressed="true">Edit</a>
-                <a href="@routes.StudentController.all()" class="btn btn-secondary btn-md" role="button" aria-pressed="true">Back to list</a>
+                <a href="@routes.StudentController.edit(student.getId)" class="btn btn-primary btn-md" role="button" aria-pressed="true">
+                    Edit</a>
+                <a href="@routes.StudentController.all()" class="btn btn-secondary btn-md" role="button" aria-pressed="true">
+                    Back to list</a>
 
             </div>
         </div>
