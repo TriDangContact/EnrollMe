@@ -2,7 +2,9 @@
 @import helper._
 @(id: Long, studentForm: Form[Student], majors: Map[String, String])
 
-@main("Edit Student") {
+@sidebarLayout("Edit Student") {
+    @views.html.shared.adminSidebar()
+}{
     <div class="pt-md-5">
         <div class="page-header row">
             <div class="col-sm-12">
@@ -118,7 +120,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save</button>
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             }
             </div>

@@ -41,7 +41,7 @@
                         <td>@student.getLastName</td>
                         <td>@student.getMajor.getName</td>
                         <td>@student.getMinor.getName</td>
-                        <td><a href="#">View/Edit</a></td>
+                        <td><a href="@routes.StudentController.show(student.getId)">View</a></td>
                     </tr>
                 }
             </tbody>
