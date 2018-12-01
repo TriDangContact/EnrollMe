@@ -18,17 +18,10 @@ GET     /course/new                 controllers.CourseController.newCourse
 GET     /course/edit                controllers.CourseController.edit
 POST    /course/create              controllers.CourseController.create
 
-
-
 GET     /demo/faculty/all           controllers.DemoController.facultyAll
 GET     /demo/faculty/new           controllers.DemoController.facultyNew
 GET     /demo/faculty/edit          controllers.DemoController.facultyEdit
 GET     /demo/faculty/view          controllers.DemoController.facultyView
-
-GET     /demo/student/all           controllers.DemoController.studentAll
-GET     /demo/student/new           controllers.DemoController.studentNew
-# GET     /demo/student/edit          controllers.DemoController.studentEdit
-GET     /demo/student/view          controllers.DemoController.studentView
 
 GET     /demo/course/all            controllers.DemoController.courseAll
 GET     /demo/course/new            controllers.DemoController.courseNew

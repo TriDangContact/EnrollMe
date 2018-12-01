@@ -23,25 +23,6 @@ public class DemoController extends Controller {
     public Result facultyDelete() { return ok(); }
 
 
-//    Student components
-
-    public Result studentAll() {
-        return ok(views.html.student.all.render());
-    }
-
-    public Result studentNew() {
-        return ok();
-    }
-
-    public Result studentCreate() { return ok(); }
-
-    public Result studentView() { return ok(views.html.student.view.render(null)); }
-
-//    public Result studentEdit() { return ok(views.html.student.edit.render()); }
-
-    public Result studentDelete() { return ok(); }
-
-
 //    Course components
     public Result courseAll() { return ok(views.html.course.all.render()); }
 

@@ -10,6 +10,7 @@ import repository.MajorRepository;
 import repository.StudentRepository;
 
 import javax.inject.Inject;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletionStage;
 
@@ -32,7 +33,9 @@ public class StudentController extends Controller {
     }
 
     public Result all() {
-        return ok(views.html.student.list.render());
+        List<Student> studentList = Student.find.all();
+
+        return ok(views.html.student.list.render(studentList));
     }
 
     public Result show(Long id) {
