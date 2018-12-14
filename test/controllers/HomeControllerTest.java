@@ -8,8 +8,10 @@ import play.mvc.Result;
 import play.test.WithApplication;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static play.mvc.Http.Status.OK;
 import static play.test.Helpers.GET;
+import static play.test.Helpers.contentAsString;
 import static play.test.Helpers.route;
 
 public class HomeControllerTest extends WithApplication {
@@ -24,9 +26,10 @@ public class HomeControllerTest extends WithApplication {
         Http.RequestBuilder request = new Http.RequestBuilder()
                 .method(GET)
                 .uri("/");
-
         Result result = route(app, request);
         assertEquals(OK, result.status());
+        assertTrue(contentAsString(result).contains("Hello,"));
+        assertTrue(contentAsString(result).contains("Welcome to your EnrollMe portal!"));
     }
-
 }
+

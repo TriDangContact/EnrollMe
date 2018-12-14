@@ -2,7 +2,9 @@
 @import helper._
 @(id: Long, studentForm: Form[Student], majors: Map[String, String])
 
-@main("Edit Student") {
+@sidebarLayout("Edit Student") {
+    @views.html.shared.adminSidebar()
+} {
     <div class="pt-md-5">
         <div class="page-header row">
             <div class="col-sm-12">
@@ -10,7 +12,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row pt-md-5">
             <div class="col-md-8">
 
             @form(action = CSRF(routes.StudentController.update(id))) {
@@ -118,8 +120,9 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="reset" class="btn btn-secondary">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a href="@routes.StudentController.all()" class="btn btn-secondary btn-md" role="button" aria-pressed="true">
+                    Back to list</a>
             }
             </div>
         </div>

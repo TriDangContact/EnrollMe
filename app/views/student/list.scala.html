@@ -1,3 +1,6 @@
+@(studentList: List[Student])
+@import java.util
+
 @sidebarLayout("Student List") {
     @views.html.shared.adminSidebar()
 } {
@@ -19,91 +22,28 @@
             </div>
         </form>
 
-
         <table class="table">
             <thead class="thead-light">
                 <tr>
                     <th scope="col">Student ID</th>
-                    <th scope="col">Last Name</th>
                     <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
                     <th scope="col">Major</th>
                     <th scope="col">Minor</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
-                <tr>
-                    <td>studentID</td>
-                    <td>lastName</td>
-                    <td>firstName</td>
-                    <td>Computer Science</td>
-                    <td>Business</td>
-                    <td><a href="#">View/Edit</a></td>
-                </tr>
+                @for(student <- studentList) {
+                    <tr>
+                        <td>@student.getId</td>
+                        <td>@student.getFirstName</td>
+                        <td>@student.getLastName</td>
+                        <td>@student.getMajor.getName</td>
+                        <td>@student.getMinor.getName</td>
+                        <td><a href="@routes.StudentController.show(student.getId)">View</a></td>
+                    </tr>
+                }
             </tbody>
         </table>
 
