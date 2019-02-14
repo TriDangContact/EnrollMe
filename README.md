@@ -1,7 +1,7 @@
 # EnrollMe
 Forked from SoftWhere, our team from Software Engineering course. This project aims to create a course registration web application by following the Agile software development methodology. In particular, it uses the MVC architecture, using Java for the back end, Bootstrap framework for the front end, and MySQL for the database.
 
-# Team
+# SoftWhere Members
 Tri Dang
 Pengyu Wang
 Hsuan Yu
