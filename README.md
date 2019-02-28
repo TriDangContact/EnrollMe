@@ -8,7 +8,7 @@ Forked from SoftWhere, our team from Software Engineering course. This project a
 - Hsuan Yu (Testing)
 
 # Prototype Examples
-<a href="https://github.com/TriDangContact/EnrollMe/tree/master/enroll-me-prototype-ui">
+<a href="https://github.com/TriDangContact/EnrollMe/tree/master/enroll-me-prototype-ui">Click here to view prototype</a>
 
 # Setup #
 
