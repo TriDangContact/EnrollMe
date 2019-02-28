@@ -39,3 +39,4 @@ FLUSH PRIVILEGES;
 ```
 $ sbt run
 ```
+- Go to http://localhost:9000/ in your browser
